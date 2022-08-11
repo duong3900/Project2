@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./assests/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script type="text/javascript" src="./assets/plugins/jquery/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./assets/js/data.js"></script>
+  <script type="text/javascript" src="./assets/js/table.js"></script>
+  <script type="text/javascript" src="./assets/js/index.js"></script>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="./assets/plugins/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  
+  <script type="text/javascript" src="./assets/plugins/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+  <script src="./assests/index.js"></script>
+  <div class="header">
+    <h1 style="text-align: Center; color: white"> Tổng hợp dịch vụ</h1>
+
+    <div id="box">
+      <div class="row">
+        <div class="col-md-8 col-sm-12 col-12 bg-color">
+          <div class="repon repon1 repon2">
+            <div class="lich">
+              <div class="input-group input-daterange" style="height: 65px;">
+                <div class="row" style="margin-top: 10px; ">
+                  <h5 class="col-md-3 col-sm-6  col-12" style="color:#fff ;margin-top: 10px;">Trung bình số
+                    ca</h5>
+
+                  <div class="col-md-3 col-sm-6 col-12">
+                    <div class="row">
+                      <p class="col-md-6 col-sm-6 col-6"
+                        style="color:#fff; font-size: 14px; margin-top: 7px;padding: 0px;">Hiển thị
+                        theo:</p>
+
+                      <div class="col-md-6 col-sm-4 col-6" style="padding: 0px;">
+                        <select class="calendar-select1 ">
+                          <option value="1">Ngày</option>
+                          <option value="2">Tháng</option>
+                          <option value="3">Năm</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-3 col-sm-6 col-12">
+                    <div class="min-date-picker-container  ">
+                      <div class="input-group date date-picker" id="min-date-picker">
+                        <label for="min-date-textfield">Từ ngày</label>
+                        <input type="text" id="min-date-textfield" class="form-control ">
+                        <span class="input-group-append">
+                          <span class="input-group-text">
+                            <i class="fa fa-calendar date-picker-btn"></i>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 col-sm-6 col-12">
+                    <div class="max-date-picker-container ">
+                      <div class="input-group date date-picker" id="max-date-picker">
+                          <label for="max-date-textfield">Đến ngày</label>
+                          <input type="text" id="max-date-textfield" class="form-control ">
+                          <span class="input-group-append">
+                              <span class="input-group-text">
+                                  <i class="fa fa-calendar date-picker-btn"></i>
+                              </span>
+                          </span>
+                      </div>
+                  </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-12 ">
+              <div class="reponbieudo reponbieudo1 reponbieudo2">
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+                <canvas id="myChart" style="width:100%; height: 220px">
+                </canvas>
+
+                <script>
+                  var xValues = ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ nhật'];
+                  var yValues = [175, 155, 149, 130, 145, 50, 60];
+
+
+
+                  new Chart("myChart", {
+                    type: "line",
+                    data: {
+                      labels: xValues,
+                      datasets: [{
+                        fill: false,
+                        lineTension: 0,
+                        backgroundColor: "#155ed1",
+                        borderColor: "#155ed1",
+                        data: yValues
+
+                      }]
+                    },
+                    options: {
+                      maintainAspectRatio: false,
+
+                      legend: { display: false },
+                      scales: {
+                        yAxes: [{
+                          ticks: {
+                            min: 0,
+                            max: 200,
+                            stepSize: 50,
+                            fontColor: 'white'
+
+                          },
+                          gridLines: {
+                            color: "#b2b7bd",
+                            zeroLineColor: "#b2b7bd",
+                          },
+                        }],
+                        xAxes: [{
+                          offset: true,
+                          ticks: {
+                            fontColor: 'white'
+                          },
+                          gridLines: {
+                            display: false
+                          },
+                        }],
+
+                      }
+                    }
+                  });
+                </script>
+              </div>
+
+
+
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class=" sumnotifi col-md-3 col-sm-12 col-12">
+          <div class="row">
+            <div id="amount" class="amount col-md-5 col-sm-5 col-5  bg-color " style="height: 140px; margin:10px 3%;">
+              <h4 class="text-notifi">Tổng số</h4>
+              <h1 id="amount1" ></h1>
+            </div>
+            <div id="done" class=" done col-md-5 col-sm-5 col-5 bg-color" style="height: 140px; margin-left:24px 3%;">
+              <h4 class="text-notifi">Đã duyệt</h4>
+              <h1 id="done1">12</h1>
+            </div>
+          </div>
+
+          <div id="unread" class="row">
+            <div id="unread" class=" unread col-md-5 col-sm-5 col-5 bg-color " style="height: 140px; margin:10px 3%;">
+              <h4 class="text-notifi">Chưa đọc</h4>
+              <h1 id="unread1">32</h1>
+            </div>
+            <div id="reading" class= " reading col-md-5 col-sm-5 col-5  bg-color" style="height: 140px; margin-left:24px 3%;">
+              <h4 class="text-notifi">Đang đọc</h4>
+              <h1 id="reading1">21</h1>
+            </div>
+          </div>
+
+          <script>
+            var num1 = parseFloat(document.getElementById('done1').innerHTML);
+            var num2 = parseFloat(document.getElementById('unread1').innerHTML);
+            var num3 = parseFloat(document.getElementById('reading1').innerHTML);
+
+            function sum1(){
+            document.getElementById('amount1').innerHTML = num1 + num2 + num3;
+            }
+
+            sum1();
+          </script>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" col-md-8 col-sm-12 col-12  bg-color" style="height: 300px;">
+          <div class="doctor-list-container " >
+            <div id="table-doctor" class="row justify-content-between " >
+                <h6>Số ca/Bác sỹ</h6>
+                <h6 class="today-header"></h6>
+            </div>
+            <div  class="row justify-content-end" >
+
+              
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="isscroll-checkbox" checked>
+                    <label class="custom-control-label" for="isscroll-checkbox">Cuộn</label>
+                </div>
+            </div>
+            <div class="table-container" id="doctor-table-container">
+                <table class="doctor-list-table table table-borderless m-0" id="doctor-list-table">
+                    <thead>
+                        <tr class="table-borderless">
+                            <th scope="col" class="col-8">Họ và tên</th>
+                            <th scope="col">CT</th>
+                            <th scope="col">DX</th>
+                            <th scope="col">Tổng</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-sm">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        </div>
+        <div class="col-md-3 col-sm-12 col-12 ">
+          <div class="repon repon1 repon2">
+            <div class=" bg-color">
+
+              <div class="bottom">
+                <h6 class="text-bottom1">Số ca/Nhóm dịch vụ</h6>
+                <h6 class="text-bottom2">Ngày 28/07/2022</h6>
+              </div>
+
+              <canvas id="myChart1" style="width:100%;height:266px"></canvas>
+
+              <script>
+                var xValues = ["CT", "DX"];
+                var yValues = [2, 45];
+                var barColors = ["#155ed1", "#155ed1"];
+
+                new Chart("myChart1", {
+                  type: "bar",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+
+                      backgroundColor: barColors,
+                      data: yValues,
+                      barThickness: 60
+                    }]
+                  },
+                  options: {
+                    maintainAspectRatio: true,
+
+                    legend: { display: false },
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                          min: 0,
+                          max: 60,
+                          stepSize: 20,
+                          fontColor: 'white'
+                        },
+                        gridLines: {
+                          color: "#b2b7bd",
+                          zeroLineColor: "#b2b7bd"
+                        }
+                      }],
+                      xAxes: [{
+                        ticks: {
+                          fontColor: 'white'
+                        },
+                        gridLines: {
+                          display: false
+                        }
+
+                      }],
+
+
+                    }
+                  }
+                });
+              </script>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <script>
+    $(document).ready(function () {
+
+      $('.input-daterange').datepicker({
+        format: 'dd-mm-yyyy',
+        autoclose: true
+      });
+
+    });
+  </script>
+</body>
+
+</html>

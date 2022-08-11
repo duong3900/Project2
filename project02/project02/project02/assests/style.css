@@ -1,0 +1,134 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Times, Arial, Tahoma, sans-serif;
+    }
+#box{
+    color: white;
+    background: #353A40;
+    
+}
+.header{
+    background: #353A40;
+    
+}
+.infor-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    
+}
+#header-table{
+    margin-top: 8px;
+}
+.calendar-select {
+    margin-top: 4px;
+    width: 64%;
+    height: 60%;
+    border: none;
+    display: flex;
+  }
+.bg-color{
+    background: #3A444E;
+}
+.sumnotifi{
+    text-align: center;
+}
+#table-doctor{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6px;
+}
+.calendar-select1{
+    margin-top: 4px;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+}
+
+.text{
+    margin-top: 8px;
+}
+
+.text-notifi{
+    text-align: center;
+    margin-top: 4px;
+}
+.calendar-select1{
+    margin-top: 4px;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+}
+#calender1{
+    display: flex;
+}
+#calender2{
+    display: flex;
+}
+#icon{
+    height: 28px;
+    margin-top: 3px;
+    width: 20px;
+    text-align: center;
+    justify-content: center;
+    line-height: 30px;
+    
+    background: #0079D0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.number-notifi{
+    text-align: center;
+    margin-top: 16px;
+    color: #0079D0;
+}
+
+.check{
+    display: flex;
+}
+#checkbox{
+    margin-left: 5px;
+}
+
+.number-notifi-2{
+    text-align: center;
+    margin-top: 16px;
+    
+}
+.number-notifi-3{
+    text-align: center;
+    margin-top: 16px;
+    color: coral;
+}
+#header-table{
+    display: flex;
+    justify-content: space-between;
+}
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
+.table{
+    color: white;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+    
+}
+.text-bottom1{
+    margin-top: 8px;
+    margin-left: 8px;
+}
+.text-bottom2{
+    margin-top: 8px;
+    margin-right: 8px;
+}
